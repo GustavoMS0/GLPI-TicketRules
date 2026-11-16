@@ -63,8 +63,7 @@ trait PluginTicketrulesConfigBody
         global $DB;
 
         if (!$DB->tableExists(self::TABLE)) {
-            $DB->doQuery(
-                "CREATE TABLE `" . self::TABLE . "` (
+            $sql = "CREATE TABLE `" . self::TABLE . "` (
                     `id` int unsigned NOT NULL AUTO_INCREMENT,
                     `entities_id` int unsigned NOT NULL DEFAULT '0',
                     `is_recursive` tinyint NOT NULL DEFAULT '1',
@@ -84,8 +83,12 @@ trait PluginTicketrulesConfigBody
                     `date_mod` timestamp NULL DEFAULT NULL,
                     PRIMARY KEY (`id`),
                     UNIQUE KEY `uniq_entities_id` (`entities_id`)
-                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC"
-            );
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC";
+            if (method_exists($DB, 'doQuery')) {
+                $DB->doQuery($sql);
+            } else {
+                $DB->query($sql);
+            }
         }
     }
 
@@ -97,7 +100,12 @@ trait PluginTicketrulesConfigBody
         global $DB;
 
         if ($DB->tableExists(self::TABLE)) {
-            $DB->doQuery('DROP TABLE IF EXISTS `' . self::TABLE . '`');
+            $sql = 'DROP TABLE IF EXISTS `' . self::TABLE . '`';
+            if (method_exists($DB, 'doQuery')) {
+                $DB->doQuery($sql);
+            } else {
+                $DB->query($sql);
+            }
         }
     }
 
