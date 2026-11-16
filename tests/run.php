@@ -618,9 +618,10 @@ function test_typed_and_untyped_rightname_compat(): void
         if (PluginTicketrulesCompat::glpiMajor() !== 10) { exit(4); }
         if (PluginTicketrulesCompat::assetPath("css/ticketrules.css") !== "public/css/ticketrules.css") { exit(5); }
         if ($GLOBALS["PLUGIN_HOOKS"]["add_css"]["ticketrules"][0] !== "public/css/ticketrules.css") { exit(6); }
-        if (PluginTicketrulesCompat::fromCore("&#60;p&#62;C:\\temp\\ok&#60;/p&#62;") !== "<p>C:\\temp\\ok</p>") { exit(7); }
-        if (PluginTicketrulesCompat::fromSanitizedInput("&#60;p&#62;C:\\\\temp\\\\ok&#60;/p&#62;") !== "<p>C:\\temp\\ok</p>") { exit(8); }
-        if (PluginTicketrulesValidator::visibleLength("&#60;p&#62;C:\\temp&#60;/p&#62;") !== 7) { exit(9); }
+        $bs = chr(92);
+        if (PluginTicketrulesCompat::fromCore("&#60;p&#62;C:" . $bs . "var" . $bs . "ok&#60;/p&#62;") !== "<p>C:" . $bs . "var" . $bs . "ok</p>") { exit(7); }
+        if (PluginTicketrulesCompat::fromSanitizedInput("&#60;p&#62;C:" . $bs . $bs . "var" . $bs . $bs . "ok&#60;/p&#62;") !== "<p>C:" . $bs . "var" . $bs . "ok</p>") { exit(8); }
+        if (PluginTicketrulesValidator::visibleLength("&#60;p&#62;C:" . $bs . "var&#60;/p&#62;") !== 6) { exit(9); }
         if (PluginTicketrulesCompat::webPath() !== "/plugins/ticketrules") { exit(10); }
         if (Plugin::$webDirCalled !== true) { exit(11); }
         PluginTicketrulesCompat::denyAccess();
