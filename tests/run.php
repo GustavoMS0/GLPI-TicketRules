@@ -53,7 +53,7 @@ function test_visible_length_strips_html_and_entities(): void
 
     assertSame(0, PluginTicketrulesValidator::visibleLength(''), 'string vazia');
     assertSame(0, PluginTicketrulesValidator::visibleLength('<p>   &nbsp;  <br></p>'), 'somente tags e nbsp');
-    assertSame(0, PluginTicketrulesValidator::visibleLength("\xFF<p>\xc2\xa0  </p>"), 'nbsp com UTF-8 invalido no fallback');
+    assertSame(1, PluginTicketrulesValidator::visibleLength("\xFF<p>\xc2\xa0  </p>"), 'nbsp removido mesmo com UTF-8 invalido no fallback');
     assertSame(10, PluginTicketrulesValidator::visibleLength('<div><span>&lt;ok&gt;</span>   <b>teste</b></div>'), 'entidades decodificadas e colapso de espacos');
     assertSame(24, PluginTicketrulesValidator::visibleLength("  <p>Solução&nbsp;&amp;&nbsp;teste\n\t aplicado</p>  "), 'multibyte UTF-8 e whitespace');
 }
