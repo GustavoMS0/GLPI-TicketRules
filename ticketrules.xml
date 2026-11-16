@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+   <name>Ticket Rules</name>
+   <key>ticketrules</key>
+   <state>stable</state>
+   <logo>https://raw.githubusercontent.com/GustavoMS0/GLPI-TicketRules/main/ticketrules.png</logo>
+   <description>
+      <short>
+         <en>Required fields and minimum solution quality rules before solving or closing GLPI tickets.</en>
+         <pt>Regras de campos obrigatórios e qualidade mínima da solução antes de solucionar ou fechar chamados.</pt>
+      </short>
+      <long>
+         <en>Enforces configurable data-quality gates per entity (with recursive inheritance) when solving or closing tickets in GLPI 10, 11 and 12. Requires category, ticket type, assigned technician, assigned group, location, request source, task or worked time, and a minimum visible character count in solutions (ignoring HTML tags and empty entities). Supports filtering by ticket type (Incident or Request), exempt profiles, and automatic bypass for CLI/cron jobs and requester solution approvals.</en>
+         <pt>Garante qualidade nos atendimentos exigindo campos e critérios mínimos por entidade (com herança recursiva) antes de solucionar ou fechar chamados no GLPI 10, 11 e 12. Permite exigir categoria, tipo, técnico atribuído, grupo técnico, localização, origem da requisição, tarefa ou tempo trabalhado e quantidade mínima de caracteres visíveis na solução (desconsiderando tags HTML e entidades vazias). Suporta filtro por tipo de chamado (Incidente ou Requisição), perfis isentos e liberação automática para CLI/cron e aprovação do requerente.</pt>
+      </long>
+   </description>
+   <homepage>https://github.com/GustavoMS0/GLPI-TicketRules</homepage>
+   <download>https://github.com/GustavoMS0/GLPI-TicketRules/releases</download>
+   <issues>https://github.com/GustavoMS0/GLPI-TicketRules/issues</issues>
+   <readme>https://github.com/GustavoMS0/GLPI-TicketRules/blob/main/README.md</readme>
+   <authors>
+      <author>Gustavo Martins</author>
+   </authors>
+   <versions>
+      <version>
+         <num>1.0.0</num>
+         <compatibility>~12.0</compatibility>
+         <download_url>https://github.com/GustavoMS0/GLPI-TicketRules/releases/download/v1.0.0/ticketrules-1.0.0.zip</download_url>
+      </version>
+      <version>
+         <num>1.0.0</num>
+         <compatibility>~11.0</compatibility>
+         <download_url>https://github.com/GustavoMS0/GLPI-TicketRules/releases/download/v1.0.0/ticketrules-1.0.0.zip</download_url>
+      </version>
+      <version>
+         <num>1.0.0</num>
+         <compatibility>~10.0</compatibility>
+         <download_url>https://github.com/GustavoMS0/GLPI-TicketRules/releases/download/v1.0.0/ticketrules-1.0.0.zip</download_url>
+      </version>
+   </versions>
+   <langs>
+      <lang>pt_BR</lang>
+   </langs>
+   <license>GPL v3+</license>
+   <tags>
+      <en>
+         <tag>tickets</tag>
+         <tag>validation</tag>
+         <tag>rules</tag>
+         <tag>itil</tag>
+         <tag>solution</tag>
+         <tag>quality</tag>
+      </en>
+      <pt>
+         <tag>chamados</tag>
+         <tag>validação</tag>
+         <tag>regras</tag>
+         <tag>itil</tag>
+         <tag>solução</tag>
+         <tag>qualidade</tag>
+      </pt>
+   </tags>
+</root>

@@ -1,0 +1,246 @@
+# Ticket Rules - GLPI plugin
+# Copyright (C) 2026 G. Martins
+# This file is distributed under the same license as the Ticket Rules package (GPLv3+).
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ticket Rules 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/GustavoMS0/GLPI-TicketRules/issues\n"
+"POT-Creation-Date: 2026-11-16 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: setup.php inc/config.class.php front/config.form.php
+msgid "Ticket Rules"
+msgstr ""
+
+#: setup.php
+msgid "Instalado / configurado"
+msgstr ""
+
+#: inc/validator.class.php
+msgid "Categoria obrigatória não informada"
+msgstr ""
+
+#: inc/validator.class.php
+msgid "Tipo do chamado obrigatório não informado"
+msgstr ""
+
+#: inc/validator.class.php
+msgid "Técnico atribuído obrigatório"
+msgstr ""
+
+#: inc/validator.class.php
+msgid "Grupo técnico atribuído obrigatório"
+msgstr ""
+
+#: inc/validator.class.php
+msgid "Localização obrigatória não informada"
+msgstr ""
+
+#: inc/validator.class.php
+msgid "Origem da requisição obrigatória não informada"
+msgstr ""
+
+#: inc/validator.class.php
+msgid "É necessário registrar ao menos uma tarefa ou tempo trabalhado"
+msgstr ""
+
+#: inc/validator.class.php
+msgid "A solução deve ter pelo menos %d caracteres visíveis (atual: %d)"
+msgstr ""
+
+#: inc/validator.class.php
+msgid "Ticket Rules — ação bloqueada:"
+msgstr ""
+
+#: front/config.form.php
+msgid "Configuração específica removida. A entidade passa a herdar da entidade superior ou do padrão."
+msgstr ""
+
+#: front/config.form.php
+msgid "Regras de chamados salvas com sucesso."
+msgstr ""
+
+#: front/config.form.php
+msgid "Não foi possível salvar as regras de chamados."
+msgstr ""
+
+#: front/config.form.php
+msgid "Incidente"
+msgstr ""
+
+#: front/config.form.php
+msgid "Requisição"
+msgstr ""
+
+#: front/config.form.php
+msgid "Ticket Rules — Regras de Qualidade"
+msgstr ""
+
+#: front/config.form.php
+msgid "Defina campos obrigatórios e qualidade mínima da solução antes de solucionar ou fechar chamados."
+msgstr ""
+
+#: front/config.form.php
+msgid "Regra própria ativa"
+msgstr ""
+
+#: front/config.form.php
+msgid "Regra própria inativa"
+msgstr ""
+
+#: front/config.form.php
+msgid "Herdada de: %s"
+msgstr ""
+
+#: front/config.form.php
+msgid "Sem regra configurada (padrão inativo)"
+msgstr ""
+
+#: front/config.form.php
+msgid "Entidade:"
+msgstr ""
+
+#: front/config.form.php
+msgid "Carregar"
+msgstr ""
+
+#: front/config.form.php
+msgid "Ativação e Escopo"
+msgstr ""
+
+#: front/config.form.php
+msgid "Ativar regras nesta entidade"
+msgstr ""
+
+#: front/config.form.php
+msgid "Quando desmarcado, nenhuma validação do plugin é aplicada para esta entidade."
+msgstr ""
+
+#: front/config.form.php
+msgid "Aplicar recursivamente às entidades filhas"
+msgstr ""
+
+#: front/config.form.php
+msgid "Entidades abaixo sem regra própria herdarão esta configuração."
+msgstr ""
+
+#: front/config.form.php
+msgid "Validar ao solucionar chamado"
+msgstr ""
+
+#: front/config.form.php
+msgid "Aplica as regras ao adicionar solução ou mudar status diretamente para Solucionado."
+msgstr ""
+
+#: front/config.form.php
+msgid "Validar ao fechar chamado"
+msgstr ""
+
+#: front/config.form.php
+msgid "Aplica ao fechar diretamente ou na interface central; aprovação do requerente nunca é bloqueada."
+msgstr ""
+
+#: front/config.form.php
+msgid "Tipos de chamado abrangidos"
+msgstr ""
+
+#: front/config.form.php
+msgid "Campos Obrigatórios do Chamado"
+msgstr ""
+
+#: front/config.form.php
+msgid "Categoria obrigatória"
+msgstr ""
+
+#: front/config.form.php
+msgid "Exige categoria ITIL preenchida no chamado."
+msgstr ""
+
+#: front/config.form.php
+msgid "Tipo obrigatório"
+msgstr ""
+
+#: front/config.form.php
+msgid "Exige tipo do chamado definido (Incidente ou Requisição)."
+msgstr ""
+
+#: front/config.form.php
+msgid "Técnico atribuído obrigatório"
+msgstr ""
+
+#: front/config.form.php
+msgid "Exige ao menos um técnico atribuído ao chamado."
+msgstr ""
+
+#: front/config.form.php
+msgid "Grupo técnico obrigatório"
+msgstr ""
+
+#: front/config.form.php
+msgid "Exige ao menos um grupo técnico atribuído."
+msgstr ""
+
+#: front/config.form.php
+msgid "Localização obrigatória"
+msgstr ""
+
+#: front/config.form.php
+msgid "Exige localização informada no chamado."
+msgstr ""
+
+#: front/config.form.php
+msgid "Origem da requisição obrigatória"
+msgstr ""
+
+#: front/config.form.php
+msgid "Exige preenchimento da origem (e-mail, telefone, portal etc.)."
+msgstr ""
+
+#: front/config.form.php
+msgid "Tarefa ou tempo trabalhado obrigatório"
+msgstr ""
+
+#: front/config.form.php
+msgid "Exige ao menos uma tarefa registrada ou tempo total > 0."
+msgstr ""
+
+#: front/config.form.php
+msgid "Qualidade da Solução e Exceções"
+msgstr ""
+
+#: front/config.form.php
+msgid "Tamanho mínimo da solução (caracteres visíveis)"
+msgstr ""
+
+#: front/config.form.php
+msgid "Tags HTML, entidades vazias (como &nbsp;) e espaços repetidos são desconsiderados na contagem. Informe 0 para não exigir mínimo."
+msgstr ""
+
+#: front/config.form.php
+msgid "Perfis isentos das regras"
+msgstr ""
+
+#: front/config.form.php
+msgid "Usuários atuando com um dos perfis marcados abaixo podem solucionar e fechar chamados sem bloqueio."
+msgstr ""
+
+#: front/config.form.php
+msgid "Nenhum perfil encontrado."
+msgstr ""
+
+#: front/config.form.php
+msgid "Salvar regras"
+msgstr ""
+
+#: front/config.form.php
+msgid "Remover regra desta entidade"
+msgstr ""
