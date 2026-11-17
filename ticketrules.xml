@@ -2,7 +2,7 @@
 <root>
    <name>Ticket Rules</name>
    <key>ticketrules</key>
-   <state>stable</state>
+   <state>beta</state>
    <logo>https://raw.githubusercontent.com/GustavoMS0/GLPI-TicketRules/main/ticketrules.png</logo>
    <description>
       <short>
